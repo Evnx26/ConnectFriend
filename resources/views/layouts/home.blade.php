@@ -29,7 +29,7 @@
 </head>
 
 <body>
-    <div class="container-fluid bg-light p-0" style="background-color: #a0c5ff">
+    <div class="container-fluid p-0" style="background-color: #a0c5ff">
         <!-- Navbar Start -->
         @include('partials.navbar')
         <!-- Navbar End -->

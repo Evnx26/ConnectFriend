@@ -48,19 +48,18 @@ class User extends Authenticatable
         return $this->belongsToMany(Work::class, 'work_user');
     }
 
-    public function friends()
-    {
+    public function friends() {
         return $this->belongsToMany(User::class, 'friend_user', 'user_id', 'friend_id')
-            ->withPivot('status')
-            ->withTimestamps();
+                    ->withPivot('status')
+                    ->withTimestamps();
     }
     
-    public function friendRequests()
-    {
+    public function friendRequests() {
         return $this->belongsToMany(User::class, 'friend_user', 'friend_id', 'user_id')
-            ->withPivot('status')
-            ->withTimestamps();
+                    ->withPivot('status')
+                    ->withTimestamps();
     }
+    
 
 
     public function getNonFriends()

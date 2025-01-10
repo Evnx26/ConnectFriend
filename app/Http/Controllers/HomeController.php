@@ -29,5 +29,10 @@ class HomeController extends Controller
         $requests = Auth::user()->friendRequests->where('pivot.status', 'pending');
         return view('home.profile', compact('friends', 'requests'));
     }
+
+    public function topup()
+    {
+        return view('home.topup');
+    }
 }
 
